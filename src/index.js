@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// require('dotenv').config();
+// const Dotenv = require('dotenv-webpack');
+// console.log(process.env);
+
+
 root.render(
+
   <React.StrictMode>
     <App />
   </React.StrictMode>
