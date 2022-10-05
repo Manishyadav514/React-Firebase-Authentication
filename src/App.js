@@ -7,28 +7,31 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-        <Router>
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <>
-                  <SignUpPage /><MaterialUI/>
-                </>
-              }
-            />
-            <Route
-              exact
-              path="/SignInPage"
-              element={
-                <>
-                  <SignInPage />
-                </>
-              }
-            />
-          </Routes>
-        </Router>
+    <div className="center">
+      <Router>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <SignUpPage />
+                <MaterialUI />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/SignInPage"
+            element={
+              <>
+                <SignInPage />
+              </>
+            }
+          />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

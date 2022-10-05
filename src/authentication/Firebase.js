@@ -1,7 +1,5 @@
 import firebase from "firebase/compat/app";
 import { getAuth } from "firebase/auth";
-// import {useNavigate} from "react-router-dom";
-// console.log(process.env);
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -17,6 +15,7 @@ const firebaseConfig = {
   // messagingSenderId: "950890087245",
   // appId: "1:950890087245:web:0a259bd4460d71f6caad04",
 };
+
 export const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
