@@ -1,8 +1,5 @@
 import React, { useRef } from "react";
-import { useAuth } from "../context/AuthContext.js";
-import { auth } from "./Firebase.js";
 import "../App.css";
-import { SignUp } from "./Firebase.js";
 import firebase from "firebase/compat/app";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -40,17 +37,7 @@ const SignUpPage = () => {
   // const {signup} = useAuth()
 
   return (
-    <div style={{ position: "relative" }}>
-      <div
-        style={{
-          position: "absolute",
-          width: 400,
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-        }}
-      >
-        <div>
+    <div className="center">
           <form>
             <div className="container">
               <h1>Sign Up</h1>
@@ -83,7 +70,7 @@ const SignUpPage = () => {
               </Link>
               <p id="message" style={{color: "red"}}></p>
               <p id="password-match" style={{ color: "red" }}></p>
-              <div className="clearfix">
+              <div className={`clearfix center`}>
                 <button
                   type="submit"
                   className="signupbtn"
@@ -96,8 +83,6 @@ const SignUpPage = () => {
               </div>
             </div>
           </form>
-        </div>
-      </div>
     </div>
   );
 };

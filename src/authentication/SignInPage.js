@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import "../App.css";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import firebase from "firebase/compat/app";
 
 const SignInPage = () => {
-  const navigate = useNavigate()
   const emailRefSignIn = useRef();
   const passwordRefSignIn = useRef();
 
@@ -36,8 +35,7 @@ const SignInPage = () => {
   };
 
   return (
-    <div>
-      <div>
+      <div className="center">
         <form>
           <div className="container">
             <h1>SignIn</h1>
@@ -58,10 +56,10 @@ const SignInPage = () => {
               required
             ></input>
             <Link to="/">
-              <p>Go to home</p>
+              <p>Don't have an account?</p>
             </Link>
             <p id="message" style={{color: "red"}}></p>
-            <div className="clearfix">
+            <div className={`clearfix center`}>
               <button
                 type="submit"
                 className="signupbtn"
@@ -74,7 +72,6 @@ const SignInPage = () => {
             </div>
           </div>
         </form>
-      </div>
     </div>
   );
 };
